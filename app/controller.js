@@ -6,7 +6,7 @@
 // 	headers: new Headers({
 // 		'Content-Type': 'text/plain',
 //     'Accept': 'application/vnd.github.v3+json',
-//     'Authorization' :'token ea1edead3dadb7292dc6bd6353405d09c3f32ebe'
+//     'Authorization' :'token '
 // 	})
 // });
 //
@@ -58,3 +58,7 @@
 //
 //
 // }
+
+var sum = function(a,b){
+	return a + b;
+}

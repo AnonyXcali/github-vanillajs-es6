@@ -1,51 +1,58 @@
 <html>
-  <head>
-    <title> Github Search Project</title>
-
+ <head>
+   <title> Github Search Project</title>
+<ul id="author"></ul>
 <link rel="stylesheet" href="styles.css">
 </head>
-  <body>
-   <div class="site">
-
-      <div id="picture">
-        <div id="octocat">
-        </div>
-       </div>
-     <div id="menuArea">
-       <div id="menuHeader">
-        <h1>Menu</h1>
-       </div>
-      <div id="menuOptions">
-    <div class="repo" onclick="myRepoFunction()">
-      <p>Repository Search</p>
-    </div>
-         <div class="user" onclick="myUserFunction()">
-      <p>User Search</p>
-    </div>
+ <body>
+  <div class="site">
+    <div id="picture">
+      <div id="octocat">
       </div>
      </div>
-     <div id="headerArea">
-       <h1>Search Repos or Users</h1>
-
-       <div id="searchArea">
-         <div id="searchBox">
-           <form action="#">
-  <div class="searchBox-fakeInput">
-    <div class="searchBox-inputWrapper searchBox-inputWrapper_bordered">
-      <input type="text" id="recvInput" class="form-control  searchBox-input js-searchBox-input" placeholder="Search">
+    <div id="menuArea">
+      <div id="menuHeader">
+       <h1>Menu</h1>
+      </div>
+     <div id="menuOptions">
+   <a href="#repo"><div class="repo"  onclick="myRepoFunction()">
+     <p>Repository Search</p>
+   </div></a>
+   <a href="#user"><div class="user" onclick="myUserFunction()">
+<p>User Search</p>
+</div></a>
+<a href="#home"><div class="user">
+<p>Home</p>
+</div></a>
+     </div>
     </div>
-    <div class="searchBox-clearWrapper">
-      <span class="searchBox-clear js-clearSearchBox"><button onclick="textSend()">GO!</button></span>
+    <div id="headerArea">
+      <h1>Search Repos or Users</h1>
+
+      <div id="searchArea">
+        <div id="searchBox">
+          <form action="#">
+ <div class="searchBox-fakeInput">
+   <div class="searchBox-inputWrapper searchBox-inputWrapper_bordered">
+     <input type="text" id="recvInput" class="form-control  searchBox-input js-searchBox-input" placeholder="Search">
+   </div>
+   <div class="searchBox-clearWrapper">
+     <span class="searchBox-clear js-clearSearchBox"><button onclick="textSend()">GO!</button></span>
+   </div>
+ </div>
+</form>
+        </div>
+      </div>
+    </div>
+    <div id="mainArea">
+      <h1 id="content"></h1>
+      <h1 id="checkPoint"></h1>
     </div>
   </div>
-</form>
-         </div>
-       </div>
-     </div>
-     <div id="mainArea">
-     </div>
-   </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="bundle.js" type="text/javascript"></script>
+ </body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="bundle.js" type="text/javascript"></script>
+
+
+
 </html>
