@@ -38,7 +38,7 @@ article {
    display : grid;
   grid-template-columns : 1fr 3fr 1fr;
   grid-template-rows : 2fr 6fr 2fr;
-  box-shadow: 20px 11px 20px #888888;
+  //box-shadow: 20px 11px 20px #888888;
 
 }
 
@@ -48,6 +48,11 @@ article {
   grid-column:2/3;
   text-align:center;
  font-size:30px;
+}
+
+#menuOptions a{
+  color: white;
+  text-decoration: none;
 }
 
 .repo , .user{
@@ -81,7 +86,30 @@ article {
 
 #mainArea{
   grid-area:main;
-  //background : red;
+  display : block;
+  height : 652px;
+  overflow-y: scroll;
+}
+
+#homeArea{
+  grid-area:main;
+  display:grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 2fr 2fr 2fr;
+   height: 100%;
+
+}
+
+#homeArea #gif{
+  grid-column:  2/3;
+  grid-row : 2/3;
+  margin-left: 69;
+}
+
+#gif img{
+  height : 200px;
+  width : 200px;
+
 }
 
 #headerArea{
@@ -125,7 +153,7 @@ article {
     "n n n"
     "n x n"
     "n n n";
-  box-shadow: 20px 5px 20px #888888;
+//  box-shadow: 20px 5px 20px #888888;
 
 }
 
@@ -209,4 +237,166 @@ form {
 //  width: 30rem;
   //padding: 1rem 0 5rem;
   font-size: 1.5rem;
+}
+
+#resBox{
+margin-top:10px;
+display : grid;
+
+width:500px;
+height:150px;
+background-color : #ecf0f1;
+
+grid-template-columns :  250px 1fr;
+grid-template-rows : 70px 78px;
+border-radius :2%;
+}
+
+#content{
+  columns: 2;
+}
+
+#contentUser{
+  display: grid;
+grid-template-columns: 1fr 3fr;
+grid-template-rows: 2fr 2fr 1fr;
+height: 100%;
+//background: pink;
+}
+
+#pictureUser{
+grid-row: 1/2;
+grid-column: 1/2;
+display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(5,1fr);
+  //background:black;
+}
+
+#pictureUser #pic{
+grid-row: 1/6;
+grid-column: 1/5;
+margin-left: 40px;
+//height: 100px;
+//background: url('https://avatars1.githubusercontent.com/u/17279790?v=4') center no-repeat;
+background-size: 210px;
+
+}
+
+
+#userInitDetails{
+  grid-row:1/2;
+  grid-column:2/3;
+  display:grid;
+  grid-template-columns : 1fr 1fr 1fr;
+  grid-template-rows : 2fr 1fr 1fr;
+
+  background:url(githubRes.png);
+
+}
+
+#userName{
+  margin-left:20px;
+  font-size : 50px;
+  margin-top : 10px;
+
+
+}
+
+#repoCount {
+  margin-left:20px;
+  grid-row:2/3;
+  font-size:25px;
+
+}
+
+#bio{
+  margin-left:20px;
+  grid-row:3/3;
+
+
+}
+
+#repoArea{
+  grid-row:2/4;
+  grid-column:2/4;
+}
+
+
+.resultList{
+  margin-left : 150px;
+  list-style-type: none;
+}
+
+#resBox p:nth-child(0){
+  grid-row :1/2;
+
+}
+
+#resBox p:nth-child(2){
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+
+#extraContent{
+  margin-top:40px;
+  grid-row : 2/4;
+  grid-column : 1/2;
+  //background :red;
+  display : grid;
+  grid-template-rows : 1fr 1fr 1fr 1fr;
+  grid-template-columns : 1fr 1fr 1fr;
+    grid-gap:30px;
+}
+
+
+
+#email{
+  grid-row:1/2;
+  grid-column :2/3;
+  background: url(https://cdn0.iconfinder.com/data/icons/20-flat-icons/128/email.png) center no-repeat;
+  background-size : contain;
+}
+#blog{
+  grid-row:2/3;
+  grid-column :2/3;
+  background: url(https://maxcdn.icons8.com/Share/icon/Business//blog1600.png) center no-repeat;
+  background-size : 100%;
+}
+
+#github{
+  grid-row:3/4;
+  grid-column :2/3;
+  background: url(https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png) center no-repeat;
+  background-size : contain;
+
+}
+
+//tables & user area//
+
+/*#repoList{
+  grid-row:2/4;
+  grid-column:2/4;
+  overflow-y : scroll;
+   font-family: arial, sans-serif;
+    border-collapse: collapse;
+}*/
+
+
+table{
+  width:100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd){
+  background-color: #f3c937;
+
+}
+tr:nth-child(even) {
+    color : white;
+    background-color: black;
 }

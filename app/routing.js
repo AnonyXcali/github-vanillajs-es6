@@ -1,19 +1,38 @@
+import { renderUserList } from './factory';
+// function currHash(){
+//   let CurrentHashRouter = location.hash;
+//   CurrentHashRouter = CurrentHashRouter.substr(0,5);
+//    return CurrentHashRouter;
+//
+//  }
+
+function hrefSplitter(){
+  var currentHref = window.location.href;
+  var storeHref = currentHref.split("?");
+  return storeHref[2];
+}
+
+export function checkCurrentTag(){
+   var currentUrl = window.location.href;
+   var splitCurrUrl = currentUrl.split("/");
+   var slashTag = splitCurrUrl[splitCurrUrl.length-1];
+   renderUserList(slashTag);
+
+}
+
+
+
 export function navigate(){
-
-
- var cont = document.getElementById('content');
- cont.innerHTML = location.hash;
-
- //create Elements
-
+ return locationHash();
 }
 
 function locationHash(){
-  return location.hash;
+  return window.location.hash;
 }
 
-navigate();
 
-if(!location.hash){
-  location.hash = "#home";
+if(!window.location.hash){
+  window.location.hash = "#home";
 }
+
+window.addEventListener("hashchange", navigate);

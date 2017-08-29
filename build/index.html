@@ -1,7 +1,6 @@
 <html>
  <head>
    <title> Github Search Project</title>
-<ul id="author"></ul>
 <link rel="stylesheet" href="styles.css">
 </head>
  <body>
@@ -21,8 +20,8 @@
    <a href="#user"><div class="user" onclick="myUserFunction()">
 <p>User Search</p>
 </div></a>
-<a href="#home"><div class="user">
-<p>Home</p>
+<a href="#home"><div class="user" onclick="returnToHome()">
+  <p>Home</p>
 </div></a>
      </div>
     </div>
@@ -31,7 +30,7 @@
 
       <div id="searchArea">
         <div id="searchBox">
-          <form action="#">
+          <form>
  <div class="searchBox-fakeInput">
    <div class="searchBox-inputWrapper searchBox-inputWrapper_bordered">
      <input type="text" id="recvInput" class="form-control  searchBox-input js-searchBox-input" placeholder="Search">
@@ -45,9 +44,37 @@
       </div>
     </div>
     <div id="mainArea">
-      <h1 id="content"></h1>
-      <h1 id="checkPoint"></h1>
+       <div id="contentUser">
+
+          <!-- <div id="pictureUser">
+            <div id="pic"></div>
+          </div>
+          <div id="userInitDetails">
+            <h1 id="userName"></h1>
+            <p id="repoCount"></p>
+            <p id="bio"></p>
+          </div>
+      <div id="repoList">
+        <table id="list">
+
+        </table>
+      </div>
+
+        -->
+
+          </div>
+      <div id="homeArea">
+          <div id="gif">
+           <img height="100" width="100" src="https://octodex.github.com/images/daftpunktocat-guy.gif" alt="">
+         </div>
+      </div>
+      <div id="repoArea">
+       <ul id="content">
+
+       </ul>
+      </div>
     </div>
+
   </div>
  </body>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
